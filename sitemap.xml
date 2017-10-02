@@ -1,0 +1,17 @@
+---
+---
+<pages xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for page in site.pages %}
+	{% if page.index == true %}
+  <page>
+  	<url>{{ page.url }}</url>
+  	<title>{{ page.title }}</title>
+  	<tags>
+	  	{% for tag in page.tags %}
+  		<tag>{{ tag }}</tag>
+	  	{% endfor %}
+  	</tags>
+  </page>
+  {% endif %}
+{% endfor %}
+</pages>
