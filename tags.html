@@ -1,7 +1,3 @@
 ---
 ---
-{% for tag in page.index_tags %}
-	{% assign key = tag | first %}
-	{% assign tag_page = tag | last %}
-	{{ key }} {{ tag_page.name }}<br>
-{% endfor %}
+{% assign s = '' %}[{% for tag in page.index_tags %}{% assign key = tag | first %}{{ s }}'{{ key }}'{% assign s = ',' %}{% endfor %}]

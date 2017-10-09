@@ -28,7 +28,7 @@ module Jekyll
               if index_tags[tag].nil?
                 index_tags[tag] = []
               end
-              index_tags[tag].push({'name'=>page.name, 'path'=>page.path, 'title'=>page.data['title']})
+              index_tags[tag].push(page)
             end
           end
         # end
