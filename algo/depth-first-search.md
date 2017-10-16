@@ -3,6 +3,7 @@ layout: algo
 title: Depth first search
 tags: [search algorithm, tree search]
 index: true
+comments: true
 ---
 {% capture section_desc %}**Depth-first search (DFS)** is an algorithm for traversing or searching tree or graph data structures. One starts at the root (selecting some arbitrary node as the root in the case of a graph) and explores as far as possible along each branch before [backtracking](https://en.wikipedia.org/wiki/Backtracking).  For the following graph:    
 ![example](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Graph.traversal.example.svg/200px-Graph.traversal.example.svg.png "example")   
