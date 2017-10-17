@@ -1,7 +1,7 @@
 ---
 layout: algo
 title: Depth first search
-tags: [search algorithm, tree search]
+tags: [Search, Graph]
 index: true
 comments: true
 ---
