@@ -4,7 +4,7 @@
 {% for page in site.pages %}
 	{% if page.index == true %}
   <page>
-  	<url>{{ page.url }}</url>
+  	<url>{{ site.url }}{{ page.url }}</url>
   	<title>{{ page.title }}</title>
   	<tags>
 	  	{% for tag in page.tags %}
