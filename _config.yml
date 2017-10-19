@@ -18,9 +18,10 @@ email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   A website hosts all kinds of algorithms.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-jsbase: "http://static.dev.algohub.me:8301/js"
-cssbase: "http://static.dev.algohub.me:8301/css"
+url: "http://www.dev.algohub.me:4000" # the base hostname & protocol for your site, e.g. http://example.com
+jsbase: "http://static.dev.algohub.me:8301/1/js"
+cssbase: "http://static.dev.algohub.me:8301/1/css"
+searchbase: "http://search.dev.algohub.me:3000"
 mgmtbase: "http://mgmt.dev.algohub.me:3000"
 #twitter_username: jekyllrb
 #github_username:  jekyll
