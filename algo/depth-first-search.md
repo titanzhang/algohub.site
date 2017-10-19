@@ -34,7 +34,7 @@ procedure DFS-iterative(G,v):
 ```
 These two variations of DFS visit the neighbors of each vertex in the opposite order from each other: the first neighbor of v visited by the recursive variation is the first one in the list of adjacent edges, while in the iterative variation the first visited neighbor is the last one in the list of adjacent edges. The recursive implementation will visit the nodes from the example graph in the following order: A, B, D, F, E, C, G. The non-recursive implementation will visit the nodes as: A, E, F, B, D, C, G.  The non-recursive implementation is similar to breadth-first search but differs from it in two ways:
 1. it uses a stack instead of a queue, and
-2. it delays checking whether a vertex has been discovered until the vertex is popped from the stack rather than making this check before pushing the vertex.Note that this non-recursive implementation of DFS may use O(E) space in the worst case, for example on a complete graph.test1{% endcapture %}
+2. it delays checking whether a vertex has been discovered until the vertex is popped from the stack rather than making this check before pushing the vertex.Note that this non-recursive implementation of DFS may use O(E) space in the worst case, for example on a complete graph.{% endcapture %}
 {% capture section_edu %}Something about how to teach this algorithm.{% endcapture %}
 {% capture section_app %}Applications based on this algorithm.{% endcapture %}
 {% include algo.html %}
