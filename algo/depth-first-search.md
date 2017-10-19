@@ -1,7 +1,7 @@
 ---
 layout: algo
 title: Depth first search
-tags: [Search,Graph]
+tags: [Search,Graph,Dynamic Programming]
 index: true
 comments: true
 ---
