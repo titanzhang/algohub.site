@@ -1,22 +1,37 @@
----
-layout: default
----
-{% if page.modifier %}<i>By {{page.modifier}} <span class="glyphicon glyphicon-time"></span>{{ page.modtime }}</i>{% endif %}
-{{ content }}
-{% if page.comments %}
-<hr/>
-<h2>Comments</h2>
-<div id="disqus_thread"></div>
-<script>
-// var disqus_config = function () {
-// this.page.url = '{{ page.url }}';
-// this.page.identifier = '{{ page.title }}';
-// };
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://algohub.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-{% endif %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+    <link href="{{site.cssbase}}/SiteAlgo.css" rel="stylesheet" />
+    <script src="{{site.jsbase}}/ahbase.js"></script>
+  </head>
+
+  <body>
+    <!-- Page header -->
+    {% include header.html %}
+
+    <!-- Page Content -->
+    <div class="container">
+      {% if page.modifier %}<i>By {{page.modifier}} <span class="glyphicon glyphicon-time"></span>{{ page.modtime | date: "%m/%d/%Y %H:%M:%S %Z"}}</i>{% endif %}
+      <h4>
+      {% for tag in page.tags %}
+        <span class="label label-info">{{ tag }}</span>
+      {% endfor %}
+      </h4>
+      {{ content }}
+      {% if page.comments %}
+      {% include comments.html %}
+      {% endif %}
+
+      <!-- Page footer -->
+      <hr/>
+      {% include footer.html %}
+    </div>
+
+    <script src="{{site.jsbase}}/SiteAlgo.js"></script>
+  </body>
+</html>

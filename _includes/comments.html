@@ -1,0 +1,47 @@
+<hr />
+<h3>Comments</h3>
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <form id="comment_form" action="{{ site.api.commentSaveAPI }}">
+        <h4 class='text-center'>Leave a comment</h4>
+        <div class="alert alert-success text-center" id="comment_message" role="alert" style="display:none"></div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="comment_author" name="author" placeholder="Input your email or name here"/>
+          <script>
+            ahjs.addConfig('userNameInputConfig', {
+              loginUrl: '{{ site.api.userLoginAPI }}',
+              checkLoginUrl: '{{ site.api.userCheckLoginAPI }}',
+              authorId: 'comment_author'
+            });
+          </script>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control vresize" rows="5" name="content" id="comment_content"></textarea>
+        </div>
+        <div class="text-center">
+          <input type="hidden" name="page" value="{{ page.title | slugify }}" />
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    ahjs.addConfig('commentFormConfig', {
+      fieldIDs: ['comment_author', 'comment_content'],
+      formID: "comment_form",
+      messageID: "comment_message",
+    });
+  </script>
+  {% assign slug = page.title | slugify %}
+	{% assign comments = site.data.comments[slug] %}
+  {% for comment_hash in comments %}
+  {% assign comment = comment_hash[1] %}
+  <div class="panel panel-default">
+    <div class="panel-body">{{ comment.content | markdownify }}</div>
+    <div class="panel-footer text-right">
+      <i>{{ comment.author }} <span class="glyphicon glyphicon-time"></span>{{ comment.date | date: "%m/%d/%Y %H:%M:%S %Z"}}</i>
+    </div>
+  </div>
+  {% endfor %}
+</div>

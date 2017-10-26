@@ -25,12 +25,18 @@ searchbase: "http://search.dev.algohub.me:3001"
 mgmtbase: "http://mgmt.dev.algohub.me:3000"
 #twitter_username: jekyllrb
 #github_username:  jekyll
+timezone: "America/Los_Angeles"
 
 # Build settings
 markdown: kramdown
 #theme: minima
-gems:
+plugins:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
+
+api:
+  userCheckLoginAPI: "http://mgmt.dev.algohub.me:3000/user/checkLogin"
+  userLoginAPI: "http://mgmt.dev.algohub.me:3000/user/login"
+  commentSaveAPI: "http://mgmt.dev.algohub.me:3000/comment/add"
