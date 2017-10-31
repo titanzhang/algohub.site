@@ -13,18 +13,8 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <script>
-  var searchConfig = {
-    formID: "navbar_search",
-    tagID: "navbar_search_tag",
-    tagListID: "navbar_search_tagList",
-    titleID: "navbar_search_title",
+  ahjs.addConfig('searchResultConfig', {
     resultID: "navbar_search_result",
-    contentID: "navbar_search_result_content",
-    linkTemplate: "<p><a href='{URL}'>{TITLE}</a></p>",
-    tagTemplate: "<li><a href='javascript:void(0)' ahlink='search_tag' ahdata='{DATA}'>{TITLE}</a></li>",
-    tagUrl: "/tags.html",
-    searchUrl: "{{site.searchbase}}/search",
-    baseUrl: "{{site.url}}"
-  };
-  ahjs.addConfig('navbarSearchConfig', searchConfig);
+    contentID: "navbar_search_result_content"
+  });
 </script>

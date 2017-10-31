@@ -16,3 +16,15 @@
     </span>
   </div>
 </form>
+<script>
+  ahjs.addConfig("searchBoxConfig", {
+    tagUrl: "/tags.json",
+    tagListID: "navbar_search_tagList",
+    tagTemplate: "<li><a href='javascript:void(0)' ahlink='search_tag' ahdata='{DATA}'>{TITLE}</a></li>",
+    tagID: "navbar_search_tag",
+    titleID: "navbar_search_title",
+    formID: "navbar_search",
+    searchUrl: "{{site.searchbase}}/search",
+    linkTemplate: "<p><a href='{URL}'>{TITLE}</a></p>"
+  });
+</script>
