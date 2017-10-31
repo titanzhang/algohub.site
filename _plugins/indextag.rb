@@ -4,8 +4,10 @@ module Jekyll
   class TagsGenerator < Generator
 
     def generate(site)
-      tags_html_page = site.pages.detect { |page| page.name == 'tags.html' }
-      tags_html_page.data['index_tags'] = get_index_tags(site)
+      tags_html_page = site.pages.detect { |page| page.name == 'tags.json' }
+      unless tags_html_page.nil?
+        tags_html_page.data['index_tags'] = get_index_tags(site)
+      end
     end
 
     # Returns a hash of pages and posts indexed by tags.
