@@ -1,0 +1,11 @@
+---
+title: CS-530 Presentation Evaluation (F2017)
+---
+[
+{% assign slug = page.title | slugify %}
+{% assign surveys = site.data.survey[slug] %}
+{% for survey_hash in surveys %}
+{% assign survey = survey_hash[1] %}
+{{survey}},
+{% endfor %}
+]
