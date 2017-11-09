@@ -1,0 +1,184 @@
+---
+layout: default
+title: CS-530 Presentation Evaluation (F/2017)
+---
+<div class="row">
+  <h2>{{page.title}}</h2>
+</div>
+<div class="row">
+  <form id="formSurvey" method="post" action="{{site.surveybase}}/save">
+    <input type="hidden" name="title" value="{{page.title}}" />
+    <input type="hidden" name="returl" value="{{site.url}}/survey/cs530-pres-eval-save.html" />
+    <div class="form-group">
+      <label for="evalName">Evaluator (your name)</label>
+      <input type="text" class="form-control" id="evalName" name="evalName" placeholder="Your name" />
+    </div>
+    <div class="form-group">
+      <label for="presSpeakers">Name of speakers</label>
+      <input type="text" class="form-control" id="presSpeakers" name="speakers" placeholder="Speaker1,Speaker2,..." />
+    </div>
+    <div class="form-group">
+      <label for="presTopic">Topic of the talk</label>
+      <input type="text" class="form-control" id="presTopic" name="topic" placeholder="Topic" />
+    </div>
+    <table class="table table-bordered">
+      <thread><tr>
+        <th>Guideline</th>
+        <th width="12%">very good</th>
+        <th width="12%">good</th>
+        <th width="12%">acceptable</th>
+        <th width="12%">poor</th>
+        <th width="12%">very poor</th>
+      </tr></thread>
+      <tbody>
+        <tr>
+          <th>Speaker well-prepared</th>
+          <th><label><input type="radio" name="g1" value="5" checked/> 5</label></th>
+          <th><label><input type="radio" name="g1" value="4"/> 4</label></th>
+          <th><label><input type="radio" name="g1" value="3"/> 3</label></th>
+          <th><label><input type="radio" name="g1" value="2"/> 2</label></th>
+          <th><label><input type="radio" name="g1" value="1"/> 1</label></th>
+        </tr>
+        <tr>
+          <th>Understanding of subject</th>
+          <th><label><input type="radio" name="g2" value="5" checked/> 5</label></th>
+          <th><label><input type="radio" name="g2" value="4"/> 4</label></th>
+          <th><label><input type="radio" name="g2" value="3"/> 3</label></th>
+          <th><label><input type="radio" name="g2" value="2"/> 2</label></th>
+          <th><label><input type="radio" name="g2" value="1"/> 1</label></th>
+        </tr>
+        <tr>
+          <th>Choice of material & scope of talk</th>
+          <th><label><input type="radio" name="g3" value="5" checked/> 5</label></th>
+          <th><label><input type="radio" name="g3" value="4"/> 4</label></th>
+          <th><label><input type="radio" name="g3" value="3"/> 3</label></th>
+          <th><label><input type="radio" name="g3" value="2"/> 2</label></th>
+          <th><label><input type="radio" name="g3" value="1"/> 1</label></th>
+        </tr>
+        <tr>
+          <th>Organization of presentation</th>
+          <th><label><input type="radio" name="g4" value="5" checked/> 5</label></th>
+          <th><label><input type="radio" name="g4" value="4"/> 4</label></th>
+          <th><label><input type="radio" name="g4" value="3"/> 3</label></th>
+          <th><label><input type="radio" name="g4" value="2"/> 2</label></th>
+          <th><label><input type="radio" name="g4" value="1"/> 1</label></th>
+        </tr>
+        <tr>
+          <th>Made topic easy to understand</th>
+          <th><label><input type="radio" name="g5" value="5" checked/> 5</label></th>
+          <th><label><input type="radio" name="g5" value="4"/> 4</label></th>
+          <th><label><input type="radio" name="g5" value="3"/> 3</label></th>
+          <th><label><input type="radio" name="g5" value="2"/> 2</label></th>
+          <th><label><input type="radio" name="g5" value="1"/> 1</label></th>
+        </tr>
+        <tr>
+          <th>Provided good examples</th>
+          <th><label><input type="radio" name="g6" value="5" checked/> 5</label></th>
+          <th><label><input type="radio" name="g6" value="4"/> 4</label></th>
+          <th><label><input type="radio" name="g6" value="3"/> 3</label></th>
+          <th><label><input type="radio" name="g6" value="2"/> 2</label></th>
+          <th><label><input type="radio" name="g6" value="1"/> 1</label></th>
+        </tr>
+        <tr>
+          <th>Clarity of speech & presentation style</th>
+          <th><label><input type="radio" name="g7" value="5" checked/> 5</label></th>
+          <th><label><input type="radio" name="g7" value="4"/> 4</label></th>
+          <th><label><input type="radio" name="g7" value="3"/> 3</label></th>
+          <th><label><input type="radio" name="g7" value="2"/> 2</label></th>
+          <th><label><input type="radio" name="g7" value="1"/> 1</label></th>
+        </tr>
+        <tr>
+          <th>Quality of slides</th>
+          <th><label><input type="radio" name="g8" value="5" checked/> 5</label></th>
+          <th><label><input type="radio" name="g8" value="4"/> 4</label></th>
+          <th><label><input type="radio" name="g8" value="3"/> 3</label></th>
+          <th><label><input type="radio" name="g8" value="2"/> 2</label></th>
+          <th><label><input type="radio" name="g8" value="1"/> 1</label></th>
+        </tr>
+        <tr>
+          <th>Made topic interesting</th>
+          <th><label><input type="radio" name="g9" value="5" checked/> 5</label></th>
+          <th><label><input type="radio" name="g9" value="4"/> 4</label></th>
+          <th><label><input type="radio" name="g9" value="3"/> 3</label></th>
+          <th><label><input type="radio" name="g9" value="2"/> 2</label></th>
+          <th><label><input type="radio" name="g9" value="1"/> 1</label></th>
+        </tr>
+        <tr>
+          <th>Ability to answer questions</th>
+          <th><label><input type="radio" name="g10" value="5" checked/> 5</label></th>
+          <th><label><input type="radio" name="g10" value="4"/> 4</label></th>
+          <th><label><input type="radio" name="g10" value="3"/> 3</label></th>
+          <th><label><input type="radio" name="g10" value="2"/> 2</label></th>
+          <th><label><input type="radio" name="g10" value="1"/> 1</label></th>
+        </tr>
+        <tr>
+          <th colspan="6">Overall Score : <input type="text" name="totalScore" id="totalScore" value="5" readonly/></th>
+        </tr>
+      </tbody>
+    </table>
+    <center><button type="submit" class="btn btn-primary">Submit</button></center>
+    <script>
+    ahjs.addConfig("formSurvey", {
+      formID: "formSurvey",
+      requireList: {"evalName":"Evaluator", "presSpeakers":"Name of speakers", "presTopic": "Topic of the talk"},
+      scoreList: ["g1","g2","g3","g4","g5","g6","g7","g8","g9","g10"],
+      scoreID: "totalScore"
+    });
+    function SurveyModule() {}
+
+    SurveyModule.prototype.init = function(lib) {
+      var config = ahjs.getConfig("formSurvey");
+      if (!config) return;
+
+      this.lib = lib;
+      this.scores = [];
+      var formObj = lib('#'+config.formID);
+      var requireList = config.requireList;
+      var totalScoreObj = lib('#'+config.scoreID);
+      var scoreList = config.scoreList;
+
+      this.registerScores(scoreList, totalScoreObj);
+      this.registerForm(formObj, requireList);
+    };
+
+    SurveyModule.prototype.registerScores = function(scoreList, totalScoreObj) {
+      var inputs = this.lib('input');
+      var self = this;
+      var i = 0;
+      for (i=0; i<scoreList.length; i++) {
+        var input = inputs.filter('[name="'+scoreList[i]+'"]')
+        this.scores.push(input);
+        input.click(function(){
+          var result = self.sumScores();
+          totalScoreObj.val( (result[0]/result[1]).toFixed(2) );
+        });
+      }
+    };
+
+    SurveyModule.prototype.sumScores = function() {
+      var sum = 0;
+      for (var i=0;i<this.scores.length;i++) {
+        sum += parseInt(this.scores[i].filter(':checked').val());
+      }
+      return [sum, this.scores.length];
+    };
+
+    SurveyModule.prototype.registerForm = function(formObj, requireList) {
+      var self = this;
+      formObj.submit(function(event){
+        for (var id in requireList){
+          var obj = self.lib('#'+id);
+          if (obj.val().length === 0){
+            event.preventDefault();
+            alert(requireList[id]+' cannot be empty!');
+            break;
+          }
+        }
+      });
+    };
+
+    var ahjsSurveyModule = new SurveyModule();
+    ahjs.addInit(ahjsSurveyModule.init.bind(ahjsSurveyModule));
+    </script>
+  </form>
+</div>
