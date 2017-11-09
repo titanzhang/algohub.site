@@ -6,6 +6,6 @@ title: CS-530 Presentation Evaluation (F2017)
 {% assign surveys = site.data.survey[slug] %}
 {% for survey_hash in surveys %}
 {% assign survey = survey_hash[1] %}
-{{survey}},
+{{survey | jsonify}},
 {% endfor %}
 ]
