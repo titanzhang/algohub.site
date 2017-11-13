@@ -13,7 +13,7 @@ pipeline {
 
   stages {
     stage ('Clone Source') {
-        checkout scm
+      checkout()
     }
 
     stage('Production Config') {
