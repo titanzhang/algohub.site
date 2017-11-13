@@ -1,22 +1,20 @@
 node {
   label 'NodeRaw'
 
-  def JEKYLL_CFG_ID = '3460009a-5013-467a-9b44-d29a922267e0'
-  def JEKYLL_CFG_FILE = '_config.yml'
-  def JEKYLL_VERSION = '3.5'
-
   stage ('Clone Source') {
       checkout scm
   }
 
   stage('Production Config') {
+    def JEKYLL_CFG_ID = '3460009a-5013-467a-9b44-d29a922267e0'
+    def JEKYLL_CFG_FILE = '_config.yml'
     configFileProvider([configFile(fileId: JEKYLL_CFG_ID, variable: 'CONFIG_YML')]) {
-      echo 'Write production configurations'
       sh 'cp "${CONFIG_YML}" ${JEKYLL_CFG_FILE}'
     }
   }
 
   stage('Build html') {
+    def JEKYLL_VERSION = '3.5'
     docker.image('jekyll/jekyll:${JEKYLL_VERSION}').withRun('-v ${PWD}:/srv/jekyll').inside {
       sh 'bundle exec jekyll build'
     }
