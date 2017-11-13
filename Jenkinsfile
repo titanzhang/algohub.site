@@ -2,7 +2,7 @@ node {
   label 'NodeRaw'
 
   stage('Clone SourceCode') {
-      // git 'https://github.com/titanzhang/algohub.site.git'
+      checkout scm
   }
 
   stage('Production Config') {
