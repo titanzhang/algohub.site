@@ -1,5 +1,4 @@
-node {
-  label 'NodeRaw'
+node('NodeRaw') {
 
   stage ('Clone Source') {
       checkout scm
@@ -9,7 +8,7 @@ node {
     def JEKYLL_CFG_ID = '3460009a-5013-467a-9b44-d29a922267e0'
     def JEKYLL_CFG_FILE = '_config.yml'
     configFileProvider([configFile(fileId: JEKYLL_CFG_ID, variable: 'CONFIG_YML')]) {
-      sh 'cp "${CONFIG_YML}" ${JEKYLL_CFG_FILE}'
+      sh 'cp "${CONFIG_YML}" "$JEKYLL_CFG_FILE"'
     }
   }
 
