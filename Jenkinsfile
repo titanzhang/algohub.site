@@ -21,9 +21,17 @@ node('NodeRaw') {
       }
     }
 
+    stage('Build Docker image') {
+      def newImage = docker.build("algohub-site")
+      docker.withRegistry("239150759114.dkr.ecr.us-west-1.amazonaws.com", "ecr:us-west-1:aws-ecr-cred") {
+        newImage.push("${env.BUILD_ID}")
+        newImage.push("latest")
+      }
+    }
+    
   } finally {
     stage('Cleanup') {
-      cleanWs notFailBuild: true      
+      cleanWs notFailBuild: true
     }
   }
 

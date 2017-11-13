@@ -38,6 +38,8 @@ exclude:
   - Jenkinsfile
   - README.md
   - .gitignore
+  - Dockerfile
+  - nginx.conf
 
 api:
   userCheckLoginAPI: "http://mgmt.dev.algohub.me:3000/user/checkLogin"
