@@ -13,7 +13,8 @@ node('NodeRaw') {
   }
 
   stage('Build html') {
-    docker.image("jekyll/jekyll:2.5").withRun('-v "${pwd}":/srv/jekyll') { c ->
+    JEKYLL_VERSION = '3.5'
+    docker.image("jekyll/jekyll:${JEKYLL_VERSION}").withRun('-v "${pwd}":/srv/jekyll') { c ->
       bundle exec jekyll build
     }
   }
