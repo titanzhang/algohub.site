@@ -7,17 +7,11 @@ pipeline {
   }
 
   stages {
-    stage('Clone SourceCode') {
-      steps {
-        checkout scm
-      }
-    }
-
     stage('Production Config') {
       steps {
         configFileProvider([configFile(fileId: JEKYLL_CFG_ID, variable: 'CONFIG_YML')]) {
           sh 'pwd'
-          sh 'cat ${CONFIG_YML}'
+          sh 'cat "${CONFIG_YML}"'
           sh 'ls -l'
           //TODO: replace the dev version
         }
