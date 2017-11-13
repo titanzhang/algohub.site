@@ -35,6 +35,9 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - Jenkinsfile
+  - README.md
+  - .gitignore
 
 api:
   userCheckLoginAPI: "http://mgmt.dev.algohub.me:3000/user/checkLogin"
