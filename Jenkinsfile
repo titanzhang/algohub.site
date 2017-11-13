@@ -14,7 +14,7 @@ node('NodeRaw') {
 
   stage('Build html') {
     def JEKYLL_VERSION = '3.5'
-    docker.image("jekyll/jekyll:${JEKYLL_VERSION}").withRun('-v \"${PWD}\":/srv/jekyll').inside() {
+    docker.image("jekyll/jekyll:${JEKYLL_VERSION}").withRun('-v "${PWD}":/srv/jekyll').inside() {
        bundle exec jekyll build
     }
   }
