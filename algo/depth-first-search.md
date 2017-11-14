@@ -7,13 +7,13 @@ tags:
 index: true
 comments: true
 modifier: titanzhang@gmail.com
-modtime: '2017-11-14T01:25:13.213Z'
+modtime: '2017-11-14T01:33:33.725Z'
 
 ---
 {% capture section_desc %}**Depth-first search (DFS)** is an algorithm for traversing or searching tree or graph data structures. One starts at the root (selecting some arbitrary node as the root in the case of a graph) and explores as far as possible along each branch before [backtracking](https://en.wikipedia.org/wiki/Backtracking).  For the following graph:    
 ![example](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Graph.traversal.example.svg/200px-Graph.traversal.example.svg.png "example")   
 A depth-first search starting at A, assuming that the left edges in the shown graph are chosen before right edges, and assuming the search remembers previously visited nodes and will not repeat them (since this is a small graph), will visit the nodes in the following order: A, B, D, F, E, C, G. The edges traversed in this search form a Trémaux tree, a structure with important applications in graph theory.Performing the same search without remembering previously visited nodes results in visiting nodes in the order A, B, D, F, E, A, B, D, F, E, etc. forever, caught in the A, B, D, F, E cycle and never reaching C or G.Iterative deepening is one technique to avoid this infinite loop and would reach all nodes.
-test123{% endcapture %}
+test1234{% endcapture %}
 {% capture section_complexity %}The computational complexity of DFS was investigated by John Reif, who showed that a decision version of it (establish whether some vertex u occurs before some vertex v in a DFS order of a rooted graph) is P-complete, meaning that it is "a nightmare for parallel processing".{% endcapture %}
 {% capture section_pseudocode %}**Input**: A graph G and a vertex v of G   
 **Output**: All vertices reachable from v labeled as discovered  
