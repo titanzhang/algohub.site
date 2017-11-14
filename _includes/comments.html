@@ -1,6 +1,18 @@
 <hr />
 <h3>Comments</h3>
 <div class="row">
+  {% assign slug = page.title | slugify %}
+	{% assign comments = site.data.comments[slug] %}
+  {% for comment_hash in comments %}
+  {% assign comment = comment_hash[1] %}
+  <div class="panel panel-default">
+    <div class="panel-body">{{ comment.content | markdownify }}</div>
+    <div class="panel-footer text-right">
+      <i>{{ comment.author }} <span class="glyphicon glyphicon-time"></span>{{ comment.date | date: "%m/%d/%Y %H:%M:%S %Z"}}</i>
+    </div>
+  </div>
+  {% endfor %}
+
   <div class="panel panel-default">
     <div class="panel-body">
       <form id="comment_form" action="{{ site.api.commentSaveAPI }}">
@@ -33,15 +45,4 @@
       messageID: "comment_message",
     });
   </script>
-  {% assign slug = page.title | slugify %}
-	{% assign comments = site.data.comments[slug] %}
-  {% for comment_hash in comments %}
-  {% assign comment = comment_hash[1] %}
-  <div class="panel panel-default">
-    <div class="panel-body">{{ comment.content | markdownify }}</div>
-    <div class="panel-footer text-right">
-      <i>{{ comment.author }} <span class="glyphicon glyphicon-time"></span>{{ comment.date | date: "%m/%d/%Y %H:%M:%S %Z"}}</i>
-    </div>
-  </div>
-  {% endfor %}
 </div>
