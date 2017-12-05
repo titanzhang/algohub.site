@@ -6,7 +6,7 @@ title: Breadth-first search
 tags:
   - Search
 modifier: 'false'
-modtime: '2017-12-05T21:33:50.202Z'
+modtime: '2017-12-05T21:35:49.200Z'
 
 ---
 {% capture section_desc %}Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data structures. It starts at the tree root (or some arbitrary node of a graph, sometimes referred to as a 'search key') and explores the neighbor nodes first, before moving to the next level neighbours.
@@ -66,5 +66,12 @@ def construct_path(state, meta):
   return action_list.reverse()
 ```{% endcapture %}
 {% capture section_edu %}[https://www.youtube.com/watch?v=ytcPxRsZfcU](http://){% endcapture %}
-{% capture section_app %}{% endcapture %}
+{% capture section_app %}Breadth-first search can be used to solve many problems in graph theory, for example:
+
+Copying garbage collection, Cheney's algorithm
+Finding the shortest path between two nodes u and v, with path length measured by number of edges (an advantage over depth-first search)
+(Reverse) Cuthill–McKee mesh numbering
+Ford–Fulkerson method for computing the maximum flow in a flow network
+Serialization/Deserialization of a binary tree vs serialization in sorted order, allows the tree to be re-constructed in an efficient manner.
+{% endcapture %}
 {% include algo.html %}
