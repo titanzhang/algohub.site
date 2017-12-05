@@ -5,13 +5,13 @@ comments: true
 title: Dijkstra
 tags:
   - Search
-modifier: 'false'
-modtime: '2017-12-05T16:06:02.193Z'
+modifier: hengliu@cpp.edu
+modtime: '2017-12-05T23:46:36.774Z'
 
 ---
 {% capture section_desc %}An algorithm to to find the shortest path in a graph between two nodes.{% endcapture %}
 {% capture section_complexity %}O(n^2) in some appropriate data structure{% endcapture %}
-{% capture section_pseudocode %}A*Function(start, target)
+{% capture section_pseudocode %}Function(start, target)
 	CloseSet.add(start)
 	Start.distancefromsouce<-0
 	While(OpenSet is not empty)
@@ -28,8 +28,7 @@ modtime: '2017-12-05T16:06:02.193Z'
 					neighbor and current
 		If(tempdistancefromsouce is less than this neighbor’s G value)
 			thisneighbor.camefrom<-current
-			thisneighbor.distancefromsouce<-tempdistancefromsouce
-{% endcapture %}
+			thisneighbor.distancefromsouce<-tempdistancefromsouce{% endcapture %}
 {% capture section_edu %}Here's a youtube tutorial link
 https://www.youtube.com/watch?v=GazC3A4OQTE{% endcapture %}
 {% capture section_app %}{% endcapture %}
