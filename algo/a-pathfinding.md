@@ -8,7 +8,7 @@ tags:
   - Dijkstra
   - Priority Queue
 modifier: 'true'
-modtime: '2017-12-05T20:15:03.101Z'
+modtime: '2017-12-05T20:15:44.466Z'
 
 ---
 {% capture section_desc %}A* pathfinding, an extension of Dijkstra's shortest path algorithm, is a best-first search algorithm, where instead of exhaustively checking each and every path available through a breadth-first search approach, it uses a heuristic function that is predetermined based on a cost estimate function. The computer has some special knowledge of the problem domain, that helps it decide, instead of evaluating all neighbor nodes, the most promising node to explore first. This neighbor selected will have the smallest aggregate distance from any of the explored nodes, meaning that it's f value, the sum of the goal value g and the heuristic function h is the minimum. The goal value depends on the distance from a current node to the neighbor node, and the heuristic will be the estimated distance from the neighbor node to the final destination. Depending on the problem domain, a proper heuristic must be applied, typical heuristics include the Manhattan or Chebyshev distances for 2D A* analysis. If the applied heuristic is admissible, meaning it will never overestimate the actual cost from a source node to the destination, a guaranteed optimal path exists between the two points. A* is typically used in pathfinding for video game artificial intelligence, to identify the shortest path in a map, with terrain, obstacles, traps, and dead ends. Once reaching the destination if the optimal path exists, the algorithm may return the parents of each node, starting from the destination to backtrack to the starting node.{% endcapture %}
