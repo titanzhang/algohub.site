@@ -6,7 +6,7 @@ title: Alpha–beta pruning
 tags:
   - Search
 modifier: htlay@cpp.edu
-modtime: '2017-12-05T00:17:17.843Z'
+modtime: '2017-12-05T02:17:46.571Z'
 
 ---
 {% capture section_desc %}Alpha-Beta pruning is not actually a new algorithm, rather an optimization technique for minimax algorithm. It reduces the computation time by a huge factor. This allows us to search much faster and even go into deeper levels in the game tree. It cuts off branches in the game tree which need not be searched because there already exists a better move available. It is called Alpha-Beta pruning because it passes 2 extra parameters in the minimax function, namely alpha and beta.Let's define the parameters alpha and beta.
@@ -15,29 +15,25 @@ Beta is the best value that the minimizer currently can guarantee at that level 
 ![](http://cdncontribute.geeksforgeeks.org/wp-content/uploads/GeeksForGeeks-Alpha-Beta-Pruning.png){% endcapture %}
 {% capture section_complexity %}In the worst case, where there is no node to be pruned, the full tree will be examined (or the complete tree up to the cutoff at a depth d). Alpha beta pruning saves, but how much? Notice that in the best case, each node will examine 2b-1 grandchildren to decide on its value. In the worst case, the node would examine b^2 grandchildren. This essentially means that the overall algorithm examined O( b^(d/2) ) nodes, the same as a worst-case algorithm whose cutoff is half of d. In practice this is significant.{% endcapture %}
 {% capture section_pseudocode %}```
-* the minimax value of n, searched to depth d.
-* If the value is less than min, returns min.
-* If greater than max, returns max. 
-
-		```
-		 fun minimax(n: node, d: int, min: int, max: int): int =
-			 if leaf(n) or depth=0 return evaluate(n)
-			 if n is a max node
-					v := min
-					for each child of n
-						 v' := minimax (child,d-1,v,max)
-						 if v' > v, v:= v'
-						 if v > max return max
-					return v
-			 if n is a min node
-					v := max
-					for each child of n
-						 v' := minimax (child,d-1,min,v)
-						 if v' < v, v:= v'
-						 if v < min return min
-					return v
-		```
-
+01 function alphabeta(node, depth, α, β, maximizingPlayer)
+02      if depth = 0 or node is a terminal node
+03          return the heuristic value of node
+04      if maximizingPlayer
+05          v := -∞
+06          for each child of node
+07              v := max(v, alphabeta(child, depth – 1, α, β, FALSE))
+08              α := max(α, v)
+09              if β ≤ α
+10                  break (* β cut-off *)
+11          return v
+12      else
+13          v := +∞
+14          for each child of node
+15              v := min(v, alphabeta(child, depth – 1, α, β, TRUE))
+16              β := min(β, v)
+17              if β ≤ α
+18                  break (* α cut-off *)
+19          return v
 ```{% endcapture %}
 {% capture section_edu %}Here is a video tutorial which is step by step example of Alpha-beta pruning.
 {% https://www.youtube.com/watch?v=xBXHtz4Gbdo %}{% endcapture %}
