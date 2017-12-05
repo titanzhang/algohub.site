@@ -6,16 +6,19 @@ title: Greedy Algorithm
 tags:
   - Greedy
 modifier: 'true'
-modtime: '2017-12-05T03:13:44.366Z'
+modtime: '2017-12-05T03:18:16.590Z'
 
 ---
-{% capture section_desc %}Greedy algorithms can be characterized as being short sighted, and also as non-recoverable. They are ideal only for problems which have optimal substructure. Despite this, for many simple problems (e.g. giving change), the best suited algorithms are greedy algorithms. It is important, however, to note that the greedy algorithm can be used as a selection algorithm to prioritize options within a search, or branch-and-bound algorithm. There are a few variations to the greedy algorithm:
+{% capture section_desc %}Greedy algorithms can be characterized as being short sighted, and also as non-recoverable. They are ideal only for problems which have optimal substructure. Despite this, for many simple problems (e.g. giving change), the best suited algorithms are greedy algorithms. It is important, however, to note that the greedy algorithm can be used as a selection algorithm to prioritize options within a search, or branch-and-bound algorithm. 
+
+![](https://www.google.com/search?q=greedy+algorithm&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiP4_mH9PHXAhXH3YMKHZgfCHMQ_AUIDCgD&biw=1536&bih=686#imgrc=xZCWHr_mEon_4M:/)
+There are a few variations to the greedy algorithm:
 
 Pure greedy algorithms
 
 Orthogonal greedy algorithms
 
-Relaxed greedy algorithms{% endcapture %}
+Relaxed greedy algorithms!{% endcapture %}
 {% capture section_complexity %}GREEDY ALGORITHM USED IN DIFFERENT PROBLEMS:
 
 • Coin/Money Change Problem: Time complexity of the above solution is O(n2 ) 
@@ -67,9 +70,17 @@ For each leaf c (i.e., symbol in C), construct its codeword by concatenating the
 {% endcapture %}
 {% capture section_edu %}FOLLOWING ARE GREEDY ALGORITHM TUTORIALS:
 
-https://www.youtube.com/watch?v=3XaqEng_K5s
-https://www.youtube.com/watch?v=HzeK7g8cD0Y
-https://www.youtube.com/watch?v=HzeK7g8cD0Y&list=PLqM7alHXFySESatj68JKWHRVhoJ1BxtLW
+{% https://www.youtube.com/watch?v=3XaqEng_K5s%}
+
+
+{%https://www.youtube.com/watch?v=HzeK7g8cD0Y link %}
+
+
+{%https://www.youtube.com/watch?v=HzeK7g8cD0Y&list=PLqM7alHXFySESatj68JKWHRVhoJ1BxtLW %}
+
+
+
+
 {% endcapture %}
 {% capture section_app %}APPLICATION:
 • Coin/Money Change Problem.
