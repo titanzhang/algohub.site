@@ -6,7 +6,7 @@ title: Dijkstra
 tags:
   - Search
 modifier: 'false'
-modtime: '2017-12-05T15:55:23.160Z'
+modtime: '2017-12-05T15:56:56.039Z'
 
 ---
 {% capture section_desc %}An algorithm to to find the shortest path in a graph between two nodes.{% endcapture %}
@@ -32,5 +32,5 @@ modtime: '2017-12-05T15:55:23.160Z'
 {% endcapture %}
 {% capture section_edu %}Here's a youtube tutorial link
 https://www.youtube.com/watch?v=GazC3A4OQTE{% endcapture %}
-{% capture section_app %}Google map{% endcapture %}
+{% capture section_app %}{% endcapture %}
 {% include algo.html %}
