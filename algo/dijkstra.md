@@ -6,7 +6,7 @@ title: Dijkstra
 tags:
   - Search
 modifier: 'false'
-modtime: '2017-12-05T15:56:56.039Z'
+modtime: '2017-12-05T16:06:02.193Z'
 
 ---
 {% capture section_desc %}An algorithm to to find the shortest path in a graph between two nodes.{% endcapture %}
