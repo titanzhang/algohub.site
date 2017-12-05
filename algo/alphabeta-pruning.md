@@ -6,7 +6,7 @@ title: Alpha–beta pruning
 tags:
   - Search
 modifier: htlay@cpp.edu
-modtime: '2017-12-05T02:17:46.571Z'
+modtime: '2017-12-05T02:18:39.607Z'
 
 ---
 {% capture section_desc %}Alpha-Beta pruning is not actually a new algorithm, rather an optimization technique for minimax algorithm. It reduces the computation time by a huge factor. This allows us to search much faster and even go into deeper levels in the game tree. It cuts off branches in the game tree which need not be searched because there already exists a better move available. It is called Alpha-Beta pruning because it passes 2 extra parameters in the minimax function, namely alpha and beta.Let's define the parameters alpha and beta.
@@ -36,6 +36,7 @@ Beta is the best value that the minimizer currently can guarantee at that level 
 19          return v
 ```{% endcapture %}
 {% capture section_edu %}Here is a video tutorial which is step by step example of Alpha-beta pruning.
-{% https://www.youtube.com/watch?v=xBXHtz4Gbdo %}{% endcapture %}
+
+{% https://www.youtube.com/watch?v=xBXHtz4Gbdo link %}{% endcapture %}
 {% capture section_app %}Applications such as game playing has been one of the most interesting applications of AI. Games such as chess, tic-tac-toe, and Go are interesting because they offer a pure abstraction of the competition between two armies. It is this abstraction which makes game playing an attractive area for AI research.{% endcapture %}
 {% include algo.html %}
