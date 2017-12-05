@@ -5,8 +5,8 @@ comments: true
 title: Greedy Algorithm
 tags:
   - Greedy
-modifier: 'false'
-modtime: '2017-12-05T03:13:14.463Z'
+modifier: 'true'
+modtime: '2017-12-05T03:13:44.366Z'
 
 ---
 {% capture section_desc %}Greedy algorithms can be characterized as being short sighted, and also as non-recoverable. They are ideal only for problems which have optimal substructure. Despite this, for many simple problems (e.g. giving change), the best suited algorithms are greedy algorithms. It is important, however, to note that the greedy algorithm can be used as a selection algorithm to prioritize options within a search, or branch-and-bound algorithm. There are a few variations to the greedy algorithm:
