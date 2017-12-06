@@ -7,7 +7,7 @@ tags:
   - Dynamic Programming
   - Shortest Path
 modifier: thotnguyen@cpp.edu
-modtime: '2017-12-06T02:31:43.899Z'
+modtime: '2017-12-06T02:37:07.312Z'
 
 ---
 {% capture section_desc %}Floyd-Warshall can be used to solve the shortest path problems between all pairs of vertices in a graph. In other words, after Floyd-Warshall, you will know the shortest path between any source vertex to any other destination vertex. Furthermore, Floyd-Warshall can find the shortest path even if there are negative edges.How Floyd-Warshall works is that the algorithm utilizes a concept similar to dynamic programming. Initially, a 2D array will be created listing the distance between any source vertex and any destination vertex. As we go through the algorithm using each vertex as an intermediate vertex, we will update our table accordingly. At the end of our algorithm, the distances in the table is the shortest distance between any source vertex and any destination vertex.{% endcapture %}
@@ -28,6 +28,6 @@ def floydWarshall(graph):
                 # then update the value of dist[i][j]
                 dist[source][dest] = min(dist[source][dest], dist[source][interm] + dist[interm][dest])
 ```{% endcapture %}
-{% capture section_edu %}If you want to learn more about Floyd-Warshall, you can find our YouTube explanation [here](https://youtu.be/JXBCASFon0M?t=41m55s.).{% endcapture %}
+{% capture section_edu %}If you want to learn more about Floyd-Warshall, you can find our YouTube explanation [here](https://www.youtube.com/watch?v=JXBCASFon0M&feature=youtu.be&t=41m55s).{% endcapture %}
 {% capture section_app %}Floyd-Warshall can be used in applications such as networking, where the servers can be represented by vertices, and the edges are their connections. The lower the number of their connections, the better the connection. A negative number will represent that a server will actually have a faster connection time by connecting to the other server. By using Floyd-Warshall, you can find out what is the quickest way to travel from one server to another server.{% endcapture %}
 {% include algo.html %}
