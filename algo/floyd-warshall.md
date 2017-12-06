@@ -7,7 +7,7 @@ tags:
   - Dynamic Programming
   - Shortest Path
 modifier: thotnguyen@cpp.edu
-modtime: '2017-12-06T02:21:30.624Z'
+modtime: '2017-12-06T02:31:43.899Z'
 
 ---
 {% capture section_desc %}Floyd-Warshall can be used to solve the shortest path problems between all pairs of vertices in a graph. In other words, after Floyd-Warshall, you will know the shortest path between any source vertex to any other destination vertex. Furthermore, Floyd-Warshall can find the shortest path even if there are negative edges.How Floyd-Warshall works is that the algorithm utilizes a concept similar to dynamic programming. Initially, a 2D array will be created listing the distance between any source vertex and any destination vertex. As we go through the algorithm using each vertex as an intermediate vertex, we will update our table accordingly. At the end of our algorithm, the distances in the table is the shortest distance between any source vertex and any destination vertex.{% endcapture %}
@@ -22,7 +22,6 @@ def floydWarshall(graph):
     for interm in range(V):
         # Pick all vertices as source one by one
         for source in range(V):
-        
             # Pick all vertices as destination for source i
             for dest in range(V):
                 # If vertex interm is on the shortest path from i to j,
