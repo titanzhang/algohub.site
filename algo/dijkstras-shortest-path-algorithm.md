@@ -6,7 +6,7 @@ title: Dijkstra’s shortest path algorithm
 tags:
   - Search
 modifier: msnazare@cpp.edu
-modtime: '2017-12-06T02:44:57.294Z'
+modtime: '2017-12-06T02:58:08.999Z'
 
 ---
 {% capture section_desc %}Dijikstras algorithm is similar to Prims algorithm for minimum spanning tree. 
@@ -15,7 +15,8 @@ This algorithm was developed by Edsger W. Dijkstra in 1956.
 This algorithm can be applied to weighted graph. 
 One stipulation to using the algorithm is that the graph needs to have a non-negative weight on every edge.{% endcapture %}
 {% capture section_complexity %}Time Complexity of the implementation is O(V^2) If the input graph is represented using adjacency list, it can be reduced to O(E log V) with the help of binary heap.{% endcapture %}
-{% capture section_pseudocode %}Func Dijk(Graph,Source)		
+{% capture section_pseudocode %}```
+Func Dijk(Graph,Source)		
 	For all vertex V in G		//Initialization
 	Dist V= Infinity		//Initial distance source to vertex
 	Prev V = Not defined		//Previous node in optimal Path
@@ -28,8 +29,9 @@ Delete J from U
 	alt =dist[U]+dist_btwn(U,V)
 if alt<Dist[V]				//Release(U,V)
 	dist[V]=alt
-Prev [V]=U
-Ret prev[]{% endcapture %}
+Previous [V]=U
+Return previous[]
+```{% endcapture %}
 {% capture section_edu %}https://www.youtube.com/watch?v=gdmfOwyQlcI{% endcapture %}
 {% capture section_app %}Applications:1) It is used in Google Maps
 2) It is used in finding Shortest Path.
