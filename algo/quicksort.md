@@ -7,7 +7,7 @@ tags:
   - Sort
   - Divide and Conquer
 modifier: 'false'
-modtime: '2017-12-06T03:22:29.174Z'
+modtime: '2017-12-06T03:23:50.100Z'
 
 ---
 {% capture section_desc %}Quick-Sort is an efficient sorting algorithm. It is a divide-and-conquer type of algorithm that can sort a list as fast or faster than other sorting algorithms in most cases. The reason it is a divide-and-conquer algorithm is because it divides the list into two smaller lists and recursively calls quicksort on these two smaller lists. The algorithm can be broken up into three parts.
@@ -70,9 +70,10 @@ With sorting we can
 3. For a given element find its closest element
 4. Quickly search the list to find a certain element using binary search
 5. Find the k-th largest element in the list
-6. Quickly check if a list has any duplicatesCommercial applications use Quicksort - generally it runs fast, no additional memory, 
+6. Quickly check if a list has any duplicates
+7. Commercial applications use Quicksort - generally it runs fast, no additional memory, 
 this compensates for the rare occasions when it runs with O(N2)Never use in applications which require guaranteed response time:
-		-Life-critical (medical monitoring, life support in aircraft and space craft)
-		-Mission-critical (monitoring and control in industrial and research plants handling dangerous materials, control for aircraft, defense, etc)
-unless you assume the worst-case response time.{% endcapture %}
+		* Life-critical (medical monitoring, life support in aircraft and space craft)
+		* Mission-critical (monitoring and control in industrial and research plants handling dangerous materials, control for aircraft, defense, etc)
+> unless you assume the worst-case response time.{% endcapture %}
 {% include algo.html %}
