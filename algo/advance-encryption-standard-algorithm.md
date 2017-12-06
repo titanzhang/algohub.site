@@ -32,7 +32,7 @@ ShiftRows(state);
 AddRoundKey(state, round_key[Nr]);
 end{% endcapture %}
 {% capture section_edu %}here is the video tutorial of AES algorithm
-{% https://www.youtube.com/watch?v=ayiOhApI6SM%}{% endcapture %}
+{% youtube https://www.youtube.com/watch?v=ayiOhApI6SM%}{% endcapture %}
 {% capture section_app %}Advance Encryption Standard (AES) Applications:
 The main application of AES algorithm is to encrypt the data being sent. some of the apllications are:
 1)The NSA chose AES as one of the cryptographic algorithms to be used by its Information Assurance Directorate to protect national security systems
