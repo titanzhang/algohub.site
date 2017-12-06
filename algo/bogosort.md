@@ -6,7 +6,7 @@ title: Bogosort
 tags:
   - Sort
 modifier: shmatsumura@cpp.edu
-modtime: '2017-12-06T04:47:47.308Z'
+modtime: '2017-12-06T04:50:24.397Z'
 
 ---
 {% capture section_desc %}Bogosort, a portmanteau of bogus and sort, is a purposefully inefficient sorting algorithm.  Though humorous in intent, this algorithm can be used as a pedagogical tool to highlight poor code and the random process.{% endcapture %}
@@ -17,6 +17,9 @@ modtime: '2017-12-06T04:47:47.308Z'
 2. Random shuffle array
 3. If sorted, exit end while loop{% endcapture %}
 {% capture section_edu %}15 Sorting Algorithms in 6 Minutes
-by Timo Bingmann{% youtube https://www.youtube.com/watch?v=kPRA0W1kECg %}{% endcapture %}
+by Timo Bingmann
+The last 30 seconds is bogosort
+
+{% youtube https://www.youtube.com/watch?v=kPRA0W1kECg %}{% endcapture %}
 {% capture section_app %}{% endcapture %}
 {% include algo.html %}
