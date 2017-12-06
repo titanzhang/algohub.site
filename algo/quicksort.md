@@ -7,7 +7,7 @@ tags:
   - Sort
   - Divide and Conquer
 modifier: 'false'
-modtime: '2017-12-06T03:05:51.073Z'
+modtime: '2017-12-06T03:08:04.310Z'
 
 ---
 {% capture section_desc %}Quick-Sort is an efficient sorting algorithm. It is a divide-and-conquer type of algorithm that can sort a list as fast or faster than other sorting algorithms in most cases. The reason it is a divide-and-conquer algorithm is because it divides the list into two smaller lists and recursively calls quicksort on these two smaller lists. The algorithm can be broken up into three parts.
@@ -16,9 +16,9 @@ modtime: '2017-12-06T03:05:51.073Z'
 Choosing the pivot is an essential step. Depending on the pivot the algorithm may run very fast, or in quadric time.:		
 1. Some fixed element: e.g. the first, the last, the one in the middle.
 This is a bad choice - the pivot may turn to be the smallest or the largest element, then one of the partitions will be empty.
-	2. Randomly chosen (by random generator ) - still a bad choice.
-	3. The median of the array (if the array has N numbers, the median is the [N/2] largest number. This is difficult to compute - increases the complexity.
-	4. The median-of-three choice: take the first, the last and the middle element. 
+2. Randomly chosen (by random generator ) - still a bad choice.
+3. The median of the array (if the array has N numbers, the median is the [N/2] largest number. This is difficult to compute - increases the complexity.
+4. The median-of-three choice: take the first, the last and the middle element. 
 Choose the median of these three elements.
 Example:
 8, 3, 25, 6, 10, 17, 1, 2, 18, 5. 
