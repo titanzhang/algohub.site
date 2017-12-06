@@ -70,13 +70,13 @@ For each leaf c (i.e., symbol in C), construct its codeword by concatenating the
 {% endcapture %}
 {% capture section_edu %}FOLLOWING ARE GREEDY ALGORITHM TUTORIALS:
 
-{% https://www.youtube.com/watch?v=3XaqEng_K5s%}
+{% youtube https://www.youtube.com/watch?v=3XaqEng_K5s %}
 
 
-{%https://www.youtube.com/watch?v=HzeK7g8cD0Y link %}
+{% youtube https://www.youtube.com/watch?v=HzeK7g8cD0Y %}
 
 
-{%https://www.youtube.com/watch?v=HzeK7g8cD0Y&list=PLqM7alHXFySESatj68JKWHRVhoJ1BxtLW %}
+{%youtube https://www.youtube.com/watch?v=HzeK7g8cD0Y&list=PLqM7alHXFySESatj68JKWHRVhoJ1BxtLW %}
 
 
 
