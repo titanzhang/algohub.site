@@ -1,0 +1,66 @@
+---
+layout: default
+title: CS-530 Hybrid Course Survey
+---
+<div class="row">
+  <h2>{{page.title}}</h2>
+</div>
+<div class="row">
+  <form id="formSurvey" method="post" action="{{site.surveybase}}/save">
+    <input type="hidden" name="title" value="{{page.title}}" />
+    <input type="hidden" name="returl" value="{{site.url}}/survey/cs530-hybrid-course-survey-save.html" />
+    <div class="form-group well">
+      <h4>1. What do you find to be the best feature of Adobe Connect?</h4>
+      <div class="radio">
+        <label><input type="radio" name="q1" value="1">Screen sharing for PowerPoint</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="q1" value="2">Screen sharing for whiteboard</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="q1" value="3">Group chat</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="q1" value="4">Questioner Polls</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="q1" value="5">Private collaboration (chat)</label>
+      </div>
+    </div>
+
+    <div class="form-group well">
+      <h4>2. Have you ever attempted to capture screenshots during the online sessions?</h4>
+      <div class="radio">
+        <label><input type="radio" name="q2" value="1">Yes</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="q2" value="2">No</label>
+      </div>
+    </div>
+
+    <div class="form-group well">
+      <h4>3. Which do you prefer for student presentation?</h4>
+      <div class="radio">
+        <label><input type="radio" name="q3" value="1">In-Class</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="q3" value="2">Online</label>
+      </div>
+    </div>
+
+    <div class="form-group well">
+      <h4>4. Would you take another CS hybrid class?</h4>
+      <div class="radio">
+        <label><input type="radio" name="q4" value="1">Yes</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="q4" value="2">No</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="q4" value="3">Maybe</label>
+      </div>
+    </div>
+
+    <center><button type="submit" class="btn btn-primary">Submit</button></center>
+  </form>
+</div>
