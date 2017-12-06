@@ -6,8 +6,8 @@ title: Bubble Sort
 tags:
   - Search
   - Sort
-modifier: 'false'
-modtime: '2017-12-06T01:04:39.941Z'
+modifier: 'true'
+modtime: '2017-12-06T06:39:48.048Z'
 
 ---
 {% capture section_desc %}Bubble sort is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list.Bubble sort example: ![](http://www.algolist.net/img/sorts/bubble-sort-3.png){% endcapture %}
@@ -27,5 +27,5 @@ modtime: '2017-12-06T01:04:39.941Z'
 {% youtube https://www.youtube.com/watch?v=6Gv8vg0kcHc %}{% endcapture %}
 {% capture section_app %}* Due to its simplicity, bubble sort is often used to introduce the concept of a sorting algorithm.
 * In computer graphics it is popular for its capability to detect a very small error (like swap of just two elements) in almost-sorted arrays and fix it with just linear complexity (2n).
-* For example, it is used in a polygon filling algorithm, where bounding lines are sorted by their x coordinate at a specific scan line (a line parallel to x axis) and with incrementing y their order changes (two elements are swapped) only at intersections of two lines{% endcapture %}
+* For example, it is used in a polygon filling algorithm, where bounding lines are sorted by their x coordinate at a specific scan line (a line parallel to x axis) and with incrementing y their order changes (two elements are swapped) only at intersections of two lines.{% endcapture %}
 {% include algo.html %}
