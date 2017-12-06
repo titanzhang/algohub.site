@@ -5,8 +5,8 @@ comments: true
 title: Bogosort
 tags:
   - Sort
-modifier: 'false'
-modtime: '2017-12-06T04:37:02.350Z'
+modifier: shmatsumura@cpp.edu
+modtime: '2017-12-06T04:37:38.090Z'
 
 ---
 {% capture section_desc %}Bogosort, a portmanteau of bogus and sort, is a purposefully inefficient sorting algorithm.  Though humorous in intent, this algorithm can be used as a pedagogical tool to highlight poor code.Algorithm steps:
