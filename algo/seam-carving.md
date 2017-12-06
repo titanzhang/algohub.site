@@ -7,21 +7,25 @@ tags:
   - Greedy
   - Image Processing
 modifier: 'false'
-modtime: '2017-12-06T14:09:12.123Z'
+modtime: '2017-12-06T14:10:48.730Z'
 
 ---
 {% capture section_desc %}Seam Carving is an amazing algorithm that allows for Content Aware resizing, including shrinking or expanding of an image. It produces much more visually sensical results than traditional algorithms that simply scale, stretch or crop the original image.{% endcapture %}
 {% capture section_complexity %}The complexity of Seam Carving is dependent on the number of seams you want to add or remove to the image. For each seam, you must go through each pixel in the image atleast once. Therefore, the complexity is O(n*s*e) where m is the number of seams and e is the energy calculation per pass through.{% endcapture %}
 {% capture section_pseudocode %}The Pseudocode for Seam Carving is basically the following steps:
+
+```
 If Shrinking the Image:
 1) Loop through image and find the "seam" with the least energy
 2) If Shrinking the Image, delete the seam with least energy. (Repeat steps 1&2 until the total image size is what you want to resize to)
+
 If Growing the Image:
 1) Make a Deep Copy of the Image
 2) Loop through the image and find the "seam" with the least energy
 3) Delete that seam from the duplicate image and add it to  a local array of seams.
 4) Repeat steps 2&3 until you have enough seams to expand the image to be the size you want.
 5) Add all seams from local array of seams to Original Image.
+```
 
 The actual code from scikitlearn can be seen here.
 
