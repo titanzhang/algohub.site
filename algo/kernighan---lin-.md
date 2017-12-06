@@ -7,7 +7,7 @@ tags:
   - Heuristic Algorithm
   - Graph Partitioning
 modifier: kpbhavana94@gmail.com
-modtime: '2017-12-06T01:24:13.864Z'
+modtime: '2017-12-06T01:25:46.653Z'
 
 ---
 {% capture section_desc %}The Kernighan - Lin algorithm is a heuristic algorithm for finding partitions of graphs. It's aim is to partition a graph into two parts of equal size with a minimal number of cutting edges. It is an iterative improvement algorithm, meaning that it starts from an arbitrary partition, and swaps pairs of nodes in order to improve the cost of the partition. The reason for the success of the KL heuristic is that it is fast as a greedy algorithm, but it can escape from some local optima.{% endcapture %}
@@ -46,5 +46,7 @@ Here is a video tutorial which explains and demonstrates a step by step example 
 
 1. In VLSI physical design, many partitioning needs to be done on a different level. Circuits are often partitioned into sub-circuits. Also chips are partitioned into smaller sub circuits as well. Here, the KL algorithm can also be applied to solve the problem by partitioning a circuit into two channels to obtain the minimum number of interconnections between the channels, making the circuit simpler and more efficient. 
 2. Hardware/software partitioning is a central task in hardware/software co-design . Its main focus is deciding which components of the system should be realized in hardware and which ones in software. The KL algorithm in utilized in such hardware/software co-design.
-3. The KL algorithm can also be applied to improve the efficiency of productions that use a large graph such as social networks.{% endcapture %}
+3. The KL algorithm can also be applied to improve the efficiency of productions that use a large graph such as social networks.
+ 
+{% endcapture %}
 {% include algo.html %}
