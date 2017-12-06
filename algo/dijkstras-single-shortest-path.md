@@ -6,12 +6,13 @@ title: Dijkstra's Single Shortest Path
 tags:
   - Greedy
 modifier: 'false'
-modtime: '2017-12-06T04:06:24.868Z'
+modtime: '2017-12-06T04:07:27.991Z'
 
 ---
 {% capture section_desc %}Given a graph, such as a road networks, one can use Dijkstras's algorithm to find the shortest paths between vertices in a graph. For example, if one needs to find the shortest path between locations a and b in the graph, the alorithm finds it using a greedy approach. Given the source node, the alogirhtm can eventually find shortest paths to all other vertices in the graph. The process of finding shortest paths includes a technique which updates the distance to unvisited vertices that is connected to the current vertice being explored.{% endcapture %}
 {% capture section_complexity %}The time it takes is O(( E + V) log v) using modified binary heap. Oftentimes, binary heap is used because of its simplicity. The inner loop inside the algorithm takes O(V + E) and the heap operations can take O(log v). However, using Fibonacci Heap, one can reduce the time it takes to O ( E + V log V).{% endcapture %}
-{% capture section_pseudocode %}dist[s] <- 0
+{% capture section_pseudocode %}```
+dist[s] <- 0
 for all v ∈ V-{S}
     do dist[v] <- ∞ 
 S←∅
@@ -22,7 +23,8 @@ do'''u'← mindistance(Q,dist)
 	      for'all'v'∈'neighbors[u]
 				    'do''if'''dist[v]'>'dist[u]'+'w(u,'v)'
 						      'then''''''d[v]'←d[u]'+'w(u,'v)
-	return dist{% endcapture %}
+	return dist
+```{% endcapture %}
 {% capture section_edu %}https://www.youtube.com/watch?v=WN3Rb9wVYDY{% endcapture %}
 {% capture section_app %}It can be used in many applications, such as Google Maps, telephone network, and geographical maps.{% endcapture %}
 {% include algo.html %}
