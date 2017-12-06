@@ -7,7 +7,7 @@ tags:
   - Greedy
   - Image Processing
 modifier: 'false'
-modtime: '2017-12-06T14:17:25.525Z'
+modtime: '2017-12-06T14:19:36.719Z'
 
 ---
 {% capture section_desc %}Seam Carving is an amazing algorithm that allows for Content Aware resizing, including shrinking or expanding of an image. It produces much more visually sensical results than traditional algorithms that simply scale, stretch or crop the original image.{% endcapture %}
@@ -229,10 +229,6 @@ cimport numpy as cnpcdef cnp.double_t DBL_MAX = np.finfo(np.double).maxcdef void
             last_row[:cols] = cumulative_img[rows - 1, :cols]
             sorted_indices = np.argsort(last_row_obj)    _remove_seam(image, seam_map, cols)return img[:, 0:cols]
 ```{% endcapture %}
-{% capture section_edu %}Read the Original Seam Carving Paper at this Link: [https://inst.eecs.berkeley.edu/~cs194-26/fa16/hw/proj4-seamcarving/imret.pdf](https://inst.eecs.berkeley.edu/~cs194-26/fa16/hw/proj4-seamcarving/imret.pdf)
-
-
-
-Here are some examples:![](https://drive.google.com/open?id=1S6tdqaaUvmxja7FAPjhxv716yp8ke28d){% endcapture %}
+{% capture section_edu %}Read the Original Seam Carving Paper at this Link: [https://inst.eecs.berkeley.edu/~cs194-26/fa16/hw/proj4-seamcarving/imret.pdf](https://inst.eecs.berkeley.edu/~cs194-26/fa16/hw/proj4-seamcarving/imret.pdf){% endcapture %}
 {% capture section_app %}{% endcapture %}
 {% include algo.html %}
