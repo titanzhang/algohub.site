@@ -6,7 +6,7 @@ title: Dijkstra
 tags:
   - Search
 modifier: hengliu@cpp.edu
-modtime: '2017-12-06T22:21:18.526Z'
+modtime: '2017-12-06T22:25:26.752Z'
 
 ---
 {% capture section_desc %}An algorithm to to find the shortest path in a graph between two nodes.{% endcapture %}
@@ -18,9 +18,7 @@ While(OpenSet is not empty)
 Current<-First element in OpenSet //OpenSet: Priority Queue
 If(current is target)
 	Display the path
-	Return and end
-
-Openset.remove(current)
+	Return and endOpenset.remove(current)
 CloseSet.add(current)
 For(each neighbor of current)
 	If(it is in closeset) ignore and continue
@@ -29,7 +27,7 @@ For(each neighbor of current)
 	If(temp.distancefromsource is less than this neighbor’s distancefromsource)
 		thisneighbor.camefrom<-current
 		thisneighbor.distancefromsource<-tempdistancefromsource{% endcapture %}
-{% capture section_edu %}Here's a youtube tutorial link
-https://www.youtube.com/watch?v=GazC3A4OQTE{% endcapture %}
+{% capture section_edu %}{% youtube <https://www.youtube.com/watch?v=GazC3A4OQTE> %}Here's a youtube tutorial link
+{% endcapture %}
 {% capture section_app %}{% endcapture %}
 {% include algo.html %}
