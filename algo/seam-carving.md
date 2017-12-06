@@ -7,12 +7,14 @@ tags:
   - Greedy
   - Image Processing
 modifier: 'false'
-modtime: '2017-12-06T14:28:10.928Z'
+modtime: '2017-12-06T14:28:55.464Z'
 
 ---
 {% capture section_desc %}Seam Carving is an amazing algorithm that allows for Content Aware resizing, including shrinking or expanding of an image. It produces much more visually sensical results than traditional algorithms that simply scale, stretch or crop the original image.\n![](https://i.imgur.com/XN8hg0S.png){% endcapture %}
 {% capture section_complexity %}The complexity of Seam Carving is dependent on the number of seams you want to add or remove to the image. For each seam, you must go through each pixel in the image atleast once. Therefore, the complexity is O(n*s*e) where m is the number of seams and e is the energy calculation per pass through.{% endcapture %}
-{% capture section_pseudocode %}The Pseudocode for Seam Carving is basically the following steps:```
+{% capture section_pseudocode %}The Pseudocode for Seam Carving is basically the following steps:
+
+```
 If Shrinking the Image:
 1) Loop through image and find the "seam" with the least energy
 2) If Shrinking the Image, delete the seam with least energy. (Repeat steps 1&2 until the total image size is what you want to resize to)If Growing the Image:
@@ -21,7 +23,14 @@ If Shrinking the Image:
 3) Delete that seam from the duplicate image and add it to  a local array of seams.
 4) Repeat steps 2&3 until you have enough seams to expand the image to be the size you want.
 5) Add all seams from local array of seams to Original Image.
-```The actual code from scikitlearn can be seen here.```
+```
+
+![](https://i.imgur.com/sJf1m87.png)
+
+
+The actual code from scikitlearn can be seen here.
+
+```
 def seam_carve(image, energy_map, mode, num, border=1, force_copy=True):
     """ Carve vertical or horizontal seams off an image.
     Carves out vertical/horizontal seams from an image while using the given
@@ -229,8 +238,6 @@ cimport numpy as cnpcdef cnp.double_t DBL_MAX = np.finfo(np.double).maxcdef void
             last_row[:cols] = cumulative_img[rows - 1, :cols]
             sorted_indices = np.argsort(last_row_obj)    _remove_seam(image, seam_map, cols)return img[:, 0:cols]
 ```{% endcapture %}
-{% capture section_edu %}Read the Original Seam Carving Paper at this Link: [https://inst.eecs.berkeley.edu/~cs194-26/fa16/hw/proj4-seamcarving/imret.pdf](https://inst.eecs.berkeley.edu/~cs194-26/fa16/hw/proj4-seamcarving/imret.pdf)
-
-![](https://i.imgur.com/aVecmOu.png){% endcapture %}
+{% capture section_edu %}Read the Original Seam Carving Paper at this Link: [https://inst.eecs.berkeley.edu/~cs194-26/fa16/hw/proj4-seamcarving/imret.pdf](https://inst.eecs.berkeley.edu/~cs194-26/fa16/hw/proj4-seamcarving/imret.pdf)![](https://i.imgur.com/aVecmOu.png){% endcapture %}
 {% capture section_app %}{% endcapture %}
 {% include algo.html %}
