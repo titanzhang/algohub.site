@@ -18,6 +18,7 @@ modtime: '2017-12-06T05:10:10.760Z'
 {% capture section_pseudocode %}1. While array not sorted
 2. Random shuffle array
 3. If sorted, exit end while loop{% endcapture %}
-{% capture section_edu %}15 Sorting Algorithms in 6 Minutesby Timo BingmannThe last 30 seconds is bogosort{% youtube https://www.youtube.com/watch?v=kPRA0W1kECg %}{% endcapture %}
+{% capture section_edu %}15 Sorting Algorithms in 6 Minutesby Timo BingmannThe last 30 seconds is bogosort
+{% youtube https://www.youtube.com/watch?v=kPRA0W1kECg %}{% endcapture %}
 {% capture section_app %}As a comparison to more common sorts like Quicksort, Merge Sort, and Insertion Sort, Bogosort can be used to demonstrate the impracticalness of exponential algorithms.  There are many problems that cannot be solved in a timely manner and require special work arounds.{% endcapture %}
 {% include algo.html %}
