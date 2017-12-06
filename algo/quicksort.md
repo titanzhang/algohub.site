@@ -7,7 +7,7 @@ tags:
   - Sort
   - Divide and Conquer
 modifier: 'false'
-modtime: '2017-12-06T03:23:50.100Z'
+modtime: '2017-12-06T03:27:54.498Z'
 
 ---
 {% capture section_desc %}Quick-Sort is an efficient sorting algorithm. It is a divide-and-conquer type of algorithm that can sort a list as fast or faster than other sorting algorithms in most cases. The reason it is a divide-and-conquer algorithm is because it divides the list into two smaller lists and recursively calls quicksort on these two smaller lists. The algorithm can be broken up into three parts.
@@ -30,8 +30,9 @@ Partitioning is illustrated on the above example.
 								5, 3, 25, 6, 10, 17, 1, 2, 18, 82. 
 2. We want larger elements to go to the right and smaller elements to go to the left.Two "fingers" are used to scan the elements from left to right and from right to left:
 						[5, 3, 25, 6, 10, 17, 1, 2, 18, 8]
-						^                                           ^
-						 i                                            j
+						 ^                              ^
+						 i                              j
+
 			-While i is to the left of j, we move i right, skipping all the elements less than the pivot. If an element is found greater then the pivot, i stops.
 			-While j is to the right of i, we move j left, skipping all the elements greater than the pivot. If an element is found less then the pivot, j stops.
 			-When both i and j have stopped, the elements are swapped.
@@ -47,19 +48,21 @@ There are logN partitions, and to obtain each partitions we do N comparisons (an
 * **Average-case** - O(NlogN){% endcapture %}
 {% capture section_pseudocode %}left points to the first element in the array currently processed, right points to the last element.
 ```
-if( left + 10 <= right){
-																int i = left, j = right - 1;
-																for ( ; ; ){
-																							while (a[++i] < pivot  ) {}   // move the left finger
-																							while (pivot  < a[--j] ) {}	  // move the right finger
-																							
-																							if (i < j) swap (a[i],a[j]);  // swap	
-																							else  break;		  // break if fingers have crossed
-																	}
-																	swap (a[I], a[right-1);		  // restore the pivot
-																 quicksort ( a, left, i-1);	  // call quicksort for the left part
-																 quicksort (a, i+1, right);	  // call quicksort for the left part
- }
+if( left + 10 <= right)
+    {
+	int i = left, j = right - 1;
+	for ( ; ; )
+	  {
+	    while (a[++i] < pivot  ) {}   // move the left finger
+	    while (pivot  < a[--j] ) {}	  // move the right finger
+
+	    if (i < j) swap (a[i],a[j]);  // swap	
+            else  break;		  // break if fingers have crossed
+          }
+       swap (a[I], a[right-1);		  // restore the pivot
+       quicksort ( a, left, i-1);	  // call quicksort for the left part
+       quicksort (a, i+1, right);	  // call quicksort for the left part
+     }
 else  insertionsort (a, left, right);
 ```{% endcapture %}
 {% capture section_edu %}{% youtube https://www.youtube.com/watch?v=3DV8GO9g7B4&t=2285s%}{% endcapture %}
