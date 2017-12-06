@@ -6,7 +6,7 @@ title: Dijkstra
 tags:
   - Search
 modifier: hengliu@cpp.edu
-modtime: '2017-12-06T22:28:17.118Z'
+modtime: '2017-12-06T22:29:07.885Z'
 
 ---
 {% capture section_desc %}An algorithm to to find the shortest path in a graph between two nodes.{% endcapture %}
@@ -27,6 +27,6 @@ For(each neighbor of current)
 	If(temp.distancefromsource is less than this neighbor’s distancefromsource)
 		thisneighbor.camefrom<-current
 		thisneighbor.distancefromsource<-tempdistancefromsource{% endcapture %}
-{% capture section_edu %}{% youtube </www.youtube.com/watch?v=GazC3A4OQTE> %}Here's a youtube tutorial link{% endcapture %}
+{% capture section_edu %}{% youtube </www.youtube.com/watch?v=GazC3A4OQTE> %}Here's a youtube tutorial link{% youtube <www.youtube.com/watch?v=GazC3A4OQTE> %}{% endcapture %}
 {% capture section_app %}It can be used in many area like Google map or some games, such as clash of clan.{% endcapture %}
 {% include algo.html %}
