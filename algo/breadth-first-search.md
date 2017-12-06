@@ -65,7 +65,7 @@ def construct_path(state, meta):
   
   return action_list.reverse()
 ```{% endcapture %}
-{% capture section_edu %}[https://www.youtube.com/watch?v=ytcPxRsZfcU](http://){% endcapture %}
+{% capture section_edu %}{% youtube https://www.youtube.com/watch?v=ytcPxRsZfcU %}{% endcapture %}
 {% capture section_app %}Breadth-first search can be used to solve many problems in graph theory, for example:
 
 Copying garbage collection, Cheney's algorithm
