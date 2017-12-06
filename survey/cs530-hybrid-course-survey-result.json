@@ -4,10 +4,13 @@ title: CS-530 Hybrid Course Survey
 [
 {% assign slug = page.title | slugify %}
 {% assign surveys = site.data.survey[slug] %}
+{% if surveys != null %}
+{% assign surveys = surveys | sort %}
 {% assign sep = "" %}
-{% for survey_hash in surveys %}
+{% for survey_hash in surveys reversed %}
 {% assign survey = survey_hash[1] %}
 {{sep}}{{survey | jsonify}}
 {% assign sep = "," %}
 {% endfor %}
+{% endif %}
 ]
