@@ -9,7 +9,7 @@ tags:
   - Symmetric
   - aes
 modifier: sdcorlin@cpp.edu
-modtime: '2017-12-06T04:41:38.083Z'
+modtime: '2017-12-06T04:42:22.058Z'
 
 ---
 {% capture section_desc %}The **Advanced Encryption Standard (AES)** is a symmetric key encryption standard for electronic data that was was established in 2001 by the US National Institute of Technology (NIST). A symmetric key encryption algorithm is one that uses the same key to encrypt as it does to decrypt. Think of it like the a lock and key, where it is effective at its job of locking, but its difficult to allow someone else to unlock it if needed to be sent to someone else privately, a situation much more suited to asymmetric encryption (see RSA). This is more likely to be used in an application where you want to encrypt a file for personal use, but don't want anyone else to be able to read it if they find it or a database full of valuable customer information. It was created by two Belgian cryptographers, Vincent Rijmen and Joan Daemen and was actually named after the developers, or Rijndael, previously. [The algorithm is formally defined in "FIPS PUB 197" and "ISO/IEC 18033-3"]AES is a subset of the Rijndael cipher that consists of a specific block size of 128 bits (16 bytes), although the keys can be of sizes 128, 192, and 256 bits. What this block size specification means is that if the message you want to say is over 16 bytes, it will be split into blocks so that it fulfills that, and each block will be encrypted independently. For example, if your message is 32 bytes, it will be broken into 2 blocks, if its 33 bytes, it will be three blocks, with 15 bytes of padding. The second part needed for this algorithm is the key, which can be 128, 192, or 256 bits. The smaller the key, the faster the algorithm will encrypt your message, but it will not be as secure, and vice versa. So 128 bit keys will not encrypt as strongly as 256 bit keys, but they also only require 10 cycles of the algorithm, where as 256 bit keys would need 14 cycles (40% time increase). Before we can perform the actual encryption, we must first generate the original key, which will be used in the first cycle of the algorithm. After it is used the key is expanded by adding a round key to generate the key for the next round. 
@@ -53,7 +53,7 @@ begin
 	AddRoundKey(State, round_key[rounds])
 end
 ```{% endcapture %}
-{% capture section_edu %}This link is the first video in a series that explains everything on this page on how to use the algorithm, both in theory and in a C++ application. It was quite helpful for me when first learning:https://www.youtube.com/watch?v=K2Xfm0-owS4{% endcapture %}
+{% capture section_edu %}This link is the first video in a series that explains everything on this page on how to use the algorithm, both in theory and in a C++ application. It was quite helpful for me when first learning: [YouTube](https://www.youtube.com/watch?v=K2Xfm0-owS4){% endcapture %}
 {% capture section_app %}The applications of AES are almost endless. Any time you want to encrypt data, AES can be used. As was stated earlier, there are better times to use this, and times where other algorithms where an asymmetric key algorithm would be more useful. Some useful applications for AES:
 - Database encryption
 - Encryption of personal devices
