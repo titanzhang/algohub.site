@@ -7,7 +7,7 @@ tags:
   - Tree
   - Game
 modifier: sudarshang07@gmail.com
-modtime: '2017-12-06T03:33:04.467Z'
+modtime: '2017-12-06T03:34:11.188Z'
 
 ---
 {% capture section_desc %}# Minimax: Basic Concept
@@ -77,7 +77,5 @@ Note : Even though there is a value of 9 on the right sub tree, the minimizer wi
 minimax(origin, depth, TRUE){% endcapture %}
 {% capture section_edu %}# Video Tutorial of Minimax Algorithm
 {% youtube <https://www.youtube.com/watch?v=zDskcx8FStA> %}{% endcapture %}
-{% capture section_app %}MiniMax Algorithm is used in decision theory, game theory, statistics and philosophy for minimizing the possible loss for a worst case (maximum loss) scenario.
-
-{% endcapture %}
+{% capture section_app %}MiniMax algorithm is used in decision theory, game theory, statistics and philosophy for minimizing the possible loss for a worst case (maximum loss) scenario.{% endcapture %}
 {% include algo.html %}
