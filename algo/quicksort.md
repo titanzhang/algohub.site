@@ -7,7 +7,7 @@ tags:
   - Sort
   - Divide and Conquer
 modifier: 'false'
-modtime: '2017-12-06T03:14:25.655Z'
+modtime: '2017-12-06T03:17:43.019Z'
 
 ---
 {% capture section_desc %}Quick-Sort is an efficient sorting algorithm. It is a divide-and-conquer type of algorithm that can sort a list as fast or faster than other sorting algorithms in most cases. The reason it is a divide-and-conquer algorithm is because it divides the list into two smaller lists and recursively calls quicksort on these two smaller lists. The algorithm can be broken up into three parts.
@@ -40,11 +40,12 @@ Partitioning is illustrated on the above example.
 3. Restore the pivot.After restoring the pivot we obtain the following partitioning into three groups:
 									[5, 3, 2, 6, 1] [ 8 ] [10, 25, 18, 17]
 **STEP 3. Recursively quicksort the left and the right parts**{% endcapture %}
-{% capture section_complexity %}1. **Worst-case**: O(N^2)
+{% capture section_complexity %}* **Worst-case**: O(N^2)
 This happens when the pivot is the smallest (or the largest) element. Then one of the partitions is empty, and we repeat recursively the procedure for N-1 elements.
-2. **Best-case**: O(NlogN) The best case is when the pivot is the median of the array, and then the left and the right part will have same size.
+* **Best-case**:O(NlogN) The best case is when the pivot is the median of the array, and then the left and the right part will have same size.
 There are logN partitions, and to obtain each partitions we do N comparisons (and not more than N/2 swaps). Hence the complexity is O(NlogN)
-3. **Average-case** - O(NlogN){% endcapture %}
+* **Average-case** - O(NlogN)
+{% endcapture %}
 {% capture section_pseudocode %}left points to the first element in the array currently processed, right points to the last element.if( left + 10 <= right)
     {
 				int i = left, j = right - 1;
