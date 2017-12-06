@@ -28,8 +28,7 @@ RecursiveNQueens(Q[1 .. n],r):
 	Q[r] ← j 
 RecursiveNQueens(Q[1 .. n],r + 1){% endcapture %}
 {% capture section_edu %}N queens backtracking algorithm:
-{% https://youtu.be/0DeznFqrgAI %}
-https://youtu.be/0DeznFqrgAI
+{% youtube https://youtu.be/0DeznFqrgAI %}
 {% endcapture %}
 {% capture section_app %}N-Queens itself is only a toy problem; it’s the methods for solving it that you’re supposed to be learning. Because it’s an easily-understood but nontrivial problem, it can demonstrate not just the “standard” solution with backtracking but also techniques such as search space reduction using symmetry, constraint programming, or evolutionary algorithms. All of these methods are broadly applicable.{% endcapture %}
 {% include algo.html %}
