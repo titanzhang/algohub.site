@@ -4,20 +4,13 @@ index: true
 comments: true
 title: Bubble Sort
 tags:
-  - Sort
   - Search
-  - Algorithm
-  - Simple Sort Alg
-  - Bubble Sort
-modifier: 'true'
-modtime: '2017-12-06T00:55:28.090Z'
+  - Sort
+modifier: 'false'
+modtime: '2017-12-06T01:04:39.941Z'
 
 ---
-{% capture section_desc %}Bubble sort is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list.
-
-Bubble sort example: 
-
-![](http://www.algolist.net/img/sorts/bubble-sort-3.png){% endcapture %}
+{% capture section_desc %}Bubble sort is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list.Bubble sort example: ![](http://www.algolist.net/img/sorts/bubble-sort-3.png){% endcapture %}
 {% capture section_complexity %}Bubble sort has worst-case and average complexity both О(n<sup>2</sup>), where n is the number of items being sorted. When the list is already sorted (best-case), the complexity of bubble sort is only O(n).{% endcapture %}
 {% capture section_pseudocode %}<p style="margin-left: 0px">list A</p>
 <p style="margin-left: 0px">n = length(A)</p>
