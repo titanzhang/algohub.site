@@ -37,6 +37,6 @@ If r > l
      4. Merge the two halves sorted in step 2 and 3:
              Call merge(arr, l, m, r){% endcapture %}
 {% capture section_edu %}Here is a video tutorial:
-{%https://www.youtube.com/watch?v=TzeBrDU-JaY %}{% endcapture %}
+{% youtube https://www.youtube.com/watch?v=TzeBrDU-JaY %}{% endcapture %}
 {% capture section_app %}{% endcapture %}
 {% include algo.html %}
