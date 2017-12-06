@@ -6,10 +6,10 @@ title: Dijkstra
 tags:
   - Search
 modifier: hengliu@cpp.edu
-modtime: '2017-12-06T22:35:58.060Z'
+modtime: '2017-12-06T22:37:16.543Z'
 
 ---
-{% capture section_desc %}An algorithm to to find the shortest path in a graph between two nodes.It is a form of breadth-first search (BFS, first-in first-out queue), where from the root (source node) we explore unvisited adjacent neighbors one by one and simply verify whether or not the visited node is currently the destination (Barnouti, N.H, et. al, 2016). {% endcapture %}
+{% capture section_desc %}It is an algorithm, was developed in 1959, to find the shortest path in a graph between two nodes.It is a form of breadth-first search (BFS, first-in first-out queue), where from the root (source node) we explore unvisited adjacent neighbors one by one and simply verify whether or not the visited node is currently the destination (Barnouti, N.H, et. al, 2016). {% endcapture %}
 {% capture section_complexity %}O(n^2) in some appropriate data structure{% endcapture %}
 {% capture section_pseudocode %}Function(start, target)
 CloseSet.add(start)
