@@ -7,7 +7,7 @@ tags:
   - Sort
   - Divide and Conquer
 modifier: 'false'
-modtime: '2017-12-06T03:17:43.019Z'
+modtime: '2017-12-06T03:19:37.536Z'
 
 ---
 {% capture section_desc %}Quick-Sort is an efficient sorting algorithm. It is a divide-and-conquer type of algorithm that can sort a list as fast or faster than other sorting algorithms in most cases. The reason it is a divide-and-conquer algorithm is because it divides the list into two smaller lists and recursively calls quicksort on these two smaller lists. The algorithm can be broken up into three parts.
@@ -44,22 +44,26 @@ Partitioning is illustrated on the above example.
 This happens when the pivot is the smallest (or the largest) element. Then one of the partitions is empty, and we repeat recursively the procedure for N-1 elements.
 * **Best-case**:O(NlogN) The best case is when the pivot is the median of the array, and then the left and the right part will have same size.
 There are logN partitions, and to obtain each partitions we do N comparisons (and not more than N/2 swaps). Hence the complexity is O(NlogN)
-* **Average-case** - O(NlogN)
-{% endcapture %}
-{% capture section_pseudocode %}left points to the first element in the array currently processed, right points to the last element.if( left + 10 <= right)
+* **Average-case** - O(NlogN){% endcapture %}
+{% capture section_pseudocode %}left points to the first element in the array currently processed, right points to the last element.
+```
+if( left + 10 <= right)
     {
-				int i = left, j = right - 1;
-				for ( ; ; )
-						{
-									while (a[++i] < pivot  ) {}                     // move the left finger
-									while (pivot  < a[--j] ) {}	                     // move the right finger									if (i < j) swap (a[i],a[j]);                      // swap	
-									else  break;		                                  // break if fingers have crossed
-        }
-       swap (a[I], a[right-1);		                              // restore the pivot
-       quicksort ( a, left, i-1);	                               // call quicksort for the left part
-       quicksort (a, i+1, right);	                            // call quicksort for the left part
- }
-else  insertionsort (a, left, right);{% endcapture %}
+	int i = left, j = right - 1;
+	for ( ; ; )
+	  {
+	    while (a[++i] < pivot  ) {}   // move the left finger
+	    while (pivot  < a[--j] ) {}	  // move the right finger
+
+	    if (i < j) swap (a[i],a[j]);  // swap	
+            else  break;		  // break if fingers have crossed
+          }
+       swap (a[I], a[right-1);		  // restore the pivot
+       quicksort ( a, left, i-1);	  // call quicksort for the left part
+       quicksort (a, i+1, right);	  // call quicksort for the left part
+     }
+else  insertionsort (a, left, right);
+```{% endcapture %}
 {% capture section_edu %}{% youtube https://www.youtube.com/watch?v=3DV8GO9g7B4&t=2285s%}{% endcapture %}
 {% capture section_app %}A sorting algorithm has many applications and is used as the building blocks of other applications.
 With sorting we can
