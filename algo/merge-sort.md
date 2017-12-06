@@ -7,12 +7,10 @@ tags:
   - Divide and Conquer
   - Sort
 modifier: yingyingz@cpp.edu
-modtime: '2017-12-06T06:02:12.419Z'
+modtime: '2017-12-06T06:02:46.352Z'
 
 ---
-{% capture section_desc %}Merge Sort is a divide and conquer algorithm that was invented by [John von Neumann](https://en.wikipedia.org/wiki/John_von_Neumann) in 1945. It is an efficient, general-purpose, comparison-based sorting algorithm.A merge sort works as follows:
-
-		1. Divide the unsorted list into n sublists, each containing 1 element (a list of 1 element is considered sorted).
+{% capture section_desc %}Merge Sort is a divide and conquer algorithm that was invented by [John von Neumann](https://en.wikipedia.org/wiki/John_von_Neumann) in 1945. It is an efficient, general-purpose, comparison-based sorting algorithm.A merge sort works as follows:		1. Divide the unsorted list into n sublists, each containing 1 element (a list of 1 element is considered sorted).
 		
 		2. Repeatedly merge sublists to produce new sorted sublists until there is only 1 sublist remaining. This will be the sorted list.
 		
@@ -21,7 +19,9 @@ The following diagram from Wikipedia shows the complete merge sort process for a
 																						     O(n) natural variant
 																								 
 Average Performance :            O(nlogn)			Worst-case space complexity: O(n){% endcapture %}
-{% capture section_pseudocode %}MergeSort(arr[], l,  r)If r > l     
+{% capture section_pseudocode %}```
+
+```MergeSort(arr[], l,  r)If r > l     
 		
 		1. Find the middle point to divide the array into two halves:  
              middle m = (l+r)/2
