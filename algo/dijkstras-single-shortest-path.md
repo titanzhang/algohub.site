@@ -6,7 +6,7 @@ title: Dijkstra's Single Shortest Path
 tags:
   - Greedy
 modifier: 'false'
-modtime: '2017-12-06T04:19:05.676Z'
+modtime: '2017-12-06T22:17:45.236Z'
 
 ---
 {% capture section_desc %}Given a graph, such as a road networks, one can use Dijkstras's algorithm to find the shortest paths between vertices in a graph. For example, if one needs to find the shortest path between locations a and b in the graph, the alorithm finds it using a greedy approach. Given the source node, the alogirhtm can eventually find shortest paths to all other vertices in the graph. The process of finding shortest paths includes a technique which updates the distance to unvisited vertices that is connected to the current vertice being explored.{% endcapture %}
@@ -19,10 +19,10 @@ S←∅
 Q←V'
 while'Q'≠∅
 do'''u'← mindistance(Q,dist) 
-  'S←S∪{u}'
-	    for'all'v'∈'neighbors[u]
-				 'do''if'''dist[v]'>'dist[u]'+'w(u,'v)'
-						 'then''''''d[v]'←d[u]'+'w(u,'v)
+ 'S←S∪{u}'
+	  for'all'v'∈'neighbors[u]
+			'do''if'''dist[v]'>'dist[u]'+'w(u,'v)'
+				'then''''''d[v]'←d[u]'+'w(u,'v)
 	return dist
 ```{% endcapture %}
 {% capture section_edu %}https://www.youtube.com/watch?v=WN3Rb9wVYDY{% endcapture %}
