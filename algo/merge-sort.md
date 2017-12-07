@@ -5,9 +5,8 @@ comments: true
 title: Merge Sort
 tags:
   - Divide and Conquer
-  - Sort
-modifier: yingyingz@cpp.edu
-modtime: '2017-12-06T06:12:46.460Z'
+modifier: 'false'
+modtime: '2017-12-07T02:16:35.064Z'
 
 ---
 {% capture section_desc %}Merge Sort is a divide and conquer algorithm that was invented by [John von Neumann](https://en.wikipedia.org/wiki/John_von_Neumann) in 1945. It is an efficient, general-purpose, comparison-based sorting algorithm. A merge sort works as follows:		
