@@ -10,7 +10,7 @@ tags:
   - Optimized
   - Heap
 modifier: sbthapaliya@cpp.edu
-modtime: '2017-12-07T01:02:52.703Z'
+modtime: '2017-12-07T01:03:17.383Z'
 
 ---
 {% capture section_desc %}Dijkstras algorithm is one of the most effective Single Source Shortest Path Finding Algorithm. Given a Graph and a source Node this algorithm finds the shortest path from that node to all the other nodes in the Graph. The most commonly taught implementation of Dijkstras uses LinkedList or Array data structure. Whereas in this approach we use a Min Heap or Priority Queue instead. This results in a significant improvement in the complexity of the algorithm. This really goes to show that how easily we can improve an algorithm by just using different data structures. In addition the benefit is also its simplicity. Using Min Heap this algorithm is much more simpler to understand as well given that the reader has good understanding of Heaps. Also, there is an implementation using Fibonnaci Heap that is more effiecient that this approach. However, all these optimized versions uses some form of Heap Data Structure. Minimum Heap implementation serves as a good example and introduction to optimizing algorithms by using special data structures.{% endcapture %}
@@ -29,8 +29,12 @@ modtime: '2017-12-07T01:02:52.703Z'
            If dist[v] > dist[u] + weight(u, v)               (i) Update distance of v, i.e., do
                      dist[v] = dist[u] + weight(u, v)
                (ii) Insert v into the pq (Even if v is
-                    already there)Implementation in Java:
-///////////////////////////////////////////////////////////////////////////////////////////////////
+                    already there)
+										
+										
+Implementation in Java:
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 public static void dijkstra(GNode[] g, int s)
 {
