@@ -2,7 +2,8 @@
 layout: default
 ---
 <!-- Articles -->
-{% for page in site.pages %}
+{% assign pages = site.pages | sort: 'modtime' %}
+{% for page in pages reversed %}
 {% if page.index == true %}
 <div class="row">
 <h3><a href="{{ page.url }}">{{ page.title}}</a></h3>
@@ -12,7 +13,7 @@ layout: default
 {% endfor %}
 </h4>
 <div>Updated: <span class="glyphicon glyphicon-time"></span>{{ page.modtime | date: "%m/%d/%Y" }}</div>
-<div>{{ page.content | strip_html | truncatewords:75 }}</div>
+<div>{{ page.content | strip_html | truncatewords:50 }}</div>
 <hr/>
 </div>
 {% endif %}
