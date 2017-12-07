@@ -6,16 +6,15 @@ title: Divide and Conquer Algorithm
 tags:
   - Divide and Conquer
   - Algorithms
-modifier: 'false'
-modtime: '2017-12-07T00:07:16.831Z'
+modifier: hsalarifi@cpp.edu
+modtime: '2017-12-07T00:13:23.101Z'
 
 ---
-{% capture section_desc %}Divide and Conquer is an algorithmic paradigm. A typical Divide and Conquer algorithm solves a problem using following three steps.1. Divide: Break the given problem into subproblems of same type.
+{% capture section_desc %}Divide and Conquer is an algorithmic paradigm. A typical Divide and Conquer algorithm solves a problem using following three steps
+
+1. Divide: Break the given problem into subproblems of same type.
 2. Conquer: Recursively solve these subproblems
-3. Combine: Appropriately combine the answers
-
-
- {% youtube <https://www.youtube.com/watch?v=x78uQu730b0> %}{% endcapture %}
+3. Combine: Appropriately combine the answers {% youtube <https://www.youtube.com/watch?v=x78uQu730b0> %}{% endcapture %}
 {% capture section_complexity %}Basic preliminary considerations
 • We are interested by the asymptotic time
 complexity T(n) with n being the size of the
