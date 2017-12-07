@@ -10,17 +10,20 @@ tags:
   - Optimized
   - Heap
 modifier: sbthapaliya@cpp.edu
-modtime: '2017-12-07T01:05:44.257Z'
+modtime: '2017-12-07T01:08:32.451Z'
 
 ---
 {% capture section_desc %}Dijkstras algorithm is one of the most effective Single Source Shortest Path Finding Algorithm. Given a Graph and a source Node this algorithm finds the shortest path from that node to all the other nodes in the Graph. The most commonly taught implementation of Dijkstras uses LinkedList or Array data structure. Whereas in this approach we use a Min Heap or Priority Queue instead. This results in a significant improvement in the complexity of the algorithm. This really goes to show that how easily we can improve an algorithm by just using different data structures. In addition the benefit is also its simplicity. Using Min Heap this algorithm is much more simpler to understand as well given that the reader has good understanding of Heaps. Also, there is an implementation using Fibonnaci Heap that is more effiecient that this approach. However, all these optimized versions uses some form of Heap Data Structure. Minimum Heap implementation serves as a good example and introduction to optimizing algorithms by using special data structures.{% endcapture %}
 {% capture section_complexity %}O((|E|+|V|)log|V|){% endcapture %}
-{% capture section_pseudocode %}1) Initialize distances of all vertices as infinite.2) Create an empty priority_queue pq.  Every item
+{% capture section_pseudocode %}1. Initialize distances of all vertices as infinite.
+2. Create an empty priority_queue pq.  Every item
    of pq is a pair (weight, vertex). Weight (or 
    distance) is used used as first item  of pair
    as first item is by default used to compare
-   two pairs3) Insert source vertex into pq and make its
-   distance as 0.4) While either pq doesn't become empty
+   two pairs
+3. Insert source vertex into pq and make its
+   distance as 0.
+4. While either pq doesn't become empty
     a) Extract minimum distance vertex from pq. 
        Let the extracted vertex be u.
     b) Loop through all adjacent of u and do 
@@ -34,7 +37,7 @@ modtime: '2017-12-07T01:05:44.257Z'
 										
 Implementation in Java:
 ```
-**public static void dijkstra(GNode[] g, int s)
+public static void dijkstra(GNode[] g, int s)
 {
         SpComparator comp;
         PriorityQueue<Pair<GNode,Integer>> pQueue;
@@ -88,7 +91,7 @@ Implementation in Java:
                 }
             }
         }
- }**
+ }
  ```{% endcapture %}
 {% capture section_edu %}It is a greedy algorithm that can be used to teach SSSP, optimization, greedy approach by comparing it to the linked list implementation.{% endcapture %}
 {% capture section_app %}It has applications in routing, navigation systems,  find shortest path between 2 nodes in a network.{% endcapture %}
