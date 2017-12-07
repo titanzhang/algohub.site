@@ -10,7 +10,7 @@ tags:
   - Optimized
   - Heap
 modifier: sbthapaliya@cpp.edu
-modtime: '2017-12-07T01:04:45.412Z'
+modtime: '2017-12-07T01:05:44.257Z'
 
 ---
 {% capture section_desc %}Dijkstras algorithm is one of the most effective Single Source Shortest Path Finding Algorithm. Given a Graph and a source Node this algorithm finds the shortest path from that node to all the other nodes in the Graph. The most commonly taught implementation of Dijkstras uses LinkedList or Array data structure. Whereas in this approach we use a Min Heap or Priority Queue instead. This results in a significant improvement in the complexity of the algorithm. This really goes to show that how easily we can improve an algorithm by just using different data structures. In addition the benefit is also its simplicity. Using Min Heap this algorithm is much more simpler to understand as well given that the reader has good understanding of Heaps. Also, there is an implementation using Fibonnaci Heap that is more effiecient that this approach. However, all these optimized versions uses some form of Heap Data Structure. Minimum Heap implementation serves as a good example and introduction to optimizing algorithms by using special data structures.{% endcapture %}
@@ -34,7 +34,7 @@ modtime: '2017-12-07T01:04:45.412Z'
 										
 Implementation in Java:
 ```
-public static void dijkstra(GNode[] g, int s)
+**public static void dijkstra(GNode[] g, int s)
 {
         SpComparator comp;
         PriorityQueue<Pair<GNode,Integer>> pQueue;
@@ -88,7 +88,7 @@ public static void dijkstra(GNode[] g, int s)
                 }
             }
         }
- }
+ }**
  ```{% endcapture %}
 {% capture section_edu %}It is a greedy algorithm that can be used to teach SSSP, optimization, greedy approach by comparing it to the linked list implementation.{% endcapture %}
 {% capture section_app %}It has applications in routing, navigation systems,  find shortest path between 2 nodes in a network.{% endcapture %}
