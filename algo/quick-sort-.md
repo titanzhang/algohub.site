@@ -56,6 +56,6 @@ partition (arr[], low, high)
     }
     swap arr[i + 1] and arr[high])
     return (i + 1){% endcapture %}
-{% capture section_edu %}{% youtube <https://youtu.be/COk73cpQbFQ> %}{% endcapture %}
+{% capture section_edu %}{% youtube https://youtu.be/COk73cpQbFQ %}{% endcapture %}
 {% capture section_app %}In QuickSort A value called a pivot is first selected, usually it is the value of the middle element. A "partition" of the array is then preformed. Any elements that are less than the pivot value will be moved to the beginning of the list, followed by the pivot element, and then all values that are bigger will appear at the end. The elements in each 'sublist' do not need to be sorted in any way with respect to each other, but this order must be maintained. The QuickSort algorithm is then used on each sublist, through recursion. This continues until the structure has been sorted.Applications: commercial application use quicksort- genarally it runs fast-no additional memory is requiredlife critical:-1.medical monitoring2.life support in aircraft & spacecraft)-mission critical :-1.monitring & control in industrial & reaserch plants handling dangerous material2.control for aircraft.3.defence{% endcapture %}
 {% include algo.html %}
